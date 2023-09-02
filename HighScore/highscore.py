@@ -23,8 +23,9 @@ class highscore:
 		self.write_to_file()
 
 	def main(self):
-		# Only stores the score in the given txt file if the score given is greater
-		# than the value currently in the txt file, if it is empty store the value 
+		# Only store the score in the given txt file if the score given is greater
+		# than the value currently in the txt file, if the file was originally empty 
+		# store the value without checking
 		data = self.read_file()
 		if data:
 			if self.n > int(data):
